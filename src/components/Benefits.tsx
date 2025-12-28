@@ -1,57 +1,19 @@
-import { Check, Shield, Clock, FileCheck, TrendingUp, Zap, Lock } from 'lucide-react';
+import { Check, Shield, Clock, FileCheck, TrendingUp, Zap, Lock, AlertTriangle, Scale } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useInView } from 'react-intersection-observer';
 
 const benefits = [
-  { icon: TrendingUp, text: 'Экономия 20-30% на финансах' },
-  { icon: Zap, text: 'Быстрое внедрение за 2-4 недели' },
-  { icon: Shield, text: '95% успеха в защите IP' },
-  { icon: Lock, text: 'Эксклюзивная автоматизация' },
+  { icon: TrendingUp, text: 'Экономия 20-30% на финансах в условиях роста налогов' },
+  { icon: Zap, text: 'Быстрое внедрение за 2-4 недели — до новых законов' },
+  { icon: Shield, text: '95% успеха в защите IP от усиленного контроля' },
+  { icon: Lock, text: 'Эксклюзивная автоматизация для приумножения капитала' },
 ];
 
 const guarantees = [
   { icon: Check, title: 'Качество', text: 'Результат или возврат средств' },
   { icon: Clock, title: 'Сроки', text: 'Строгое соблюдение дедлайнов' },
   { icon: FileCheck, title: 'Конфиденциальность', text: 'NDA для всех данных' },
-];
-
-const pricingPlans = [
-  {
-    name: 'Базовый',
-    price: '10 000',
-    period: 'руб/мес',
-    features: [
-      'Бухгалтерское сопровождение',
-      'Базовая настройка 1С',
-      'Ежемесячные отчеты',
-      'Email-поддержка',
-    ],
-    highlighted: false,
-  },
-  {
-    name: 'Стандарт',
-    price: '20 000',
-    period: 'руб/мес',
-    features: [
-      'Всё из Базового',
-      'Защита интеллектуальной собственности',
-      'Расширенная 1С интеграция',
-      'Приоритетная поддержка',
-    ],
-    highlighted: true,
-  },
-  {
-    name: 'Премиум',
-    price: '30 000',
-    period: 'руб/мес',
-    features: [
-      'Всё из Стандарта',
-      'Бережливое производство',
-      'Индивидуальный менеджер',
-      'Ежедневные консультации',
-    ],
-    highlighted: false,
-  },
+  { icon: Scale, title: 'Защита от законов', text: 'Адаптируем контракты под новые правила' },
 ];
 
 const Benefits = () => {
@@ -73,7 +35,7 @@ const Benefits = () => {
             Преимущества: <span className="text-accent">Реальные результаты</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Не уверены в сроках? Мы гарантируем соблюдение с штрафами за просрочку
+            Боитесь роста издержек в 2026? Мы гарантируем экономию с штрафами за просрочку
           </p>
         </div>
 
@@ -90,85 +52,82 @@ const Benefits = () => {
               <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
                 <benefit.icon className="w-6 h-6 text-accent" />
               </div>
-              <span className="font-medium text-foreground">{benefit.text}</span>
+              <span className="font-medium text-foreground text-sm">{benefit.text}</span>
             </div>
           ))}
         </div>
 
-        {/* Pricing Cards */}
-        <div className="grid md:grid-cols-3 gap-6 lg:gap-8 mb-16">
-          {pricingPlans.map((plan, index) => (
-            <div 
-              key={plan.name}
-              className={`relative rounded-xl p-6 md:p-8 transition-all duration-300 ${
-                plan.highlighted 
-                  ? 'bg-primary text-primary-foreground scale-105 shadow-2xl' 
-                  : 'bg-card border border-border hover:shadow-lg'
-              } ${inView ? 'fade-in-up' : 'opacity-0'}`}
-              style={{ animationDelay: `${0.4 + index * 0.15}s` }}
-            >
-              {plan.highlighted && (
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-accent text-accent-foreground text-sm font-medium px-4 py-1 rounded-full">
-                  Популярный
-                </div>
-              )}
-              
-              <h3 className={`text-xl font-serif font-bold mb-2 ${
-                plan.highlighted ? 'text-primary-foreground' : 'text-foreground'
-              }`}>
-                {plan.name}
-              </h3>
-              
-              <div className="mb-6">
-                <span className={`text-4xl font-bold ${
-                  plan.highlighted ? 'text-accent' : 'text-accent'
-                }`}>
-                  {plan.price}
-                </span>
-                <span className={plan.highlighted ? 'text-primary-foreground/80' : 'text-muted-foreground'}>
-                  {' '}{plan.period}
-                </span>
+        {/* Visual Transformation Chart */}
+        <div 
+          className={`bg-muted rounded-xl p-6 md:p-8 mb-16 ${
+            inView ? 'fade-in-up' : 'opacity-0'
+          }`}
+          style={{ animationDelay: '0.4s' }}
+        >
+          <h3 className="text-2xl font-serif font-bold text-center mb-8 text-foreground">
+            Трансформация вашего бизнеса <span className="text-accent">к 2026</span>
+          </h3>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Before */}
+            <div className="bg-destructive/10 rounded-lg p-6 border border-destructive/20">
+              <div className="flex items-center gap-2 mb-4">
+                <AlertTriangle className="w-6 h-6 text-destructive" />
+                <h4 className="font-bold text-foreground text-lg">До 2026: высокие затраты от инфляции</h4>
               </div>
-              
-              <ul className="space-y-3 mb-6">
-                {plan.features.map((feature) => (
-                  <li key={feature} className="flex items-center gap-2">
-                    <Check className={`w-5 h-5 flex-shrink-0 ${
-                      plan.highlighted ? 'text-accent' : 'text-accent'
-                    }`} />
-                    <span className={`text-sm ${
-                      plan.highlighted ? 'text-primary-foreground/90' : 'text-muted-foreground'
-                    }`}>
-                      {feature}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-              
-              <Button 
-                variant={plan.highlighted ? 'cta' : 'outline'}
-                className="w-full"
-                onClick={scrollToContacts}
-              >
-                Выбрать
-              </Button>
+              <div className="space-y-3">
+                <div className="flex justify-between items-center">
+                  <span className="text-muted-foreground">Налоговые издержки</span>
+                  <div className="w-32 h-4 bg-destructive/40 rounded-full"></div>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-muted-foreground">Временные затраты</span>
+                  <div className="w-28 h-4 bg-destructive/40 rounded-full"></div>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-muted-foreground">Риски IP</span>
+                  <div className="w-24 h-4 bg-destructive/40 rounded-full"></div>
+                </div>
+              </div>
             </div>
-          ))}
+
+            {/* After */}
+            <div className="bg-accent/10 rounded-lg p-6 border border-accent/20">
+              <div className="flex items-center gap-2 mb-4">
+                <TrendingUp className="w-6 h-6 text-accent" />
+                <h4 className="font-bold text-foreground text-lg">После: снижение на 25%</h4>
+              </div>
+              <div className="space-y-3">
+                <div className="flex justify-between items-center">
+                  <span className="text-muted-foreground">Налоговые издержки</span>
+                  <div className="w-20 h-4 bg-accent rounded-full"></div>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-muted-foreground">Временные затраты</span>
+                  <div className="w-16 h-4 bg-accent rounded-full"></div>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-muted-foreground">Риски IP</span>
+                  <div className="w-8 h-4 bg-accent rounded-full"></div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Guarantees */}
-        <div className="bg-muted rounded-xl p-6 md:p-8">
-          <h3 className="text-2xl font-serif font-bold text-center mb-8 text-foreground">
+        <div className="bg-primary rounded-xl p-6 md:p-8">
+          <h3 className="text-2xl font-serif font-bold text-center mb-8 text-primary-foreground">
             Наши <span className="text-accent">гарантии</span>
           </h3>
-          <div className="grid sm:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {guarantees.map((guarantee) => (
               <div key={guarantee.title} className="text-center">
-                <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
                   <guarantee.icon className="w-8 h-8 text-accent" />
                 </div>
-                <h4 className="font-bold text-foreground mb-1">{guarantee.title}</h4>
-                <p className="text-muted-foreground text-sm">{guarantee.text}</p>
+                <h4 className="font-bold text-primary-foreground mb-1">{guarantee.title}</h4>
+                <p className="text-primary-foreground/70 text-sm">{guarantee.text}</p>
               </div>
             ))}
           </div>

@@ -7,44 +7,56 @@ const steps = [
     number: 1,
     icon: PhoneCall,
     title: 'Консультация',
-    description: 'Бесплатный звонок для понимания ваших задач',
+    description: 'Обсудим ваши риски от изменений законов 2026 — прозрачно оценим ситуацию и найдем точки роста.',
+    details: 'Бесплатный звонок для понимания ваших задач. Мы анализируем вашу текущую ситуацию и определяем ключевые риски в свете новых законодательных требований.',
     highlight: 'Бесплатно',
   },
   {
     number: 2,
     icon: Search,
     title: 'Аудит бизнеса',
-    description: 'Анализ текущего состояния и выявление точек роста',
-    highlight: '',
+    description: 'Контролируем финансы и процессы, выявляем потери для будущего роста.',
+    details: 'Глубокий анализ всех аспектов вашего бизнеса: от бухгалтерии до IP-рисков. Выявляем скрытые издержки и возможности для оптимизации.',
+    highlight: '3-5 дней',
   },
   {
     number: 3,
     icon: FileText,
     title: 'План оптимизации',
-    description: 'Разработка стратегии с конкретными KPI',
-    highlight: '',
+    description: 'Автоматизируем под новые требования, с фокусом на экономию издержек.',
+    details: 'Разработка индивидуальной стратегии с конкретными KPI и сроками. Учитываем все изменения законодательства 2026 года.',
+    highlight: 'Под ключ',
   },
   {
     number: 4,
     icon: Settings,
     title: 'Внедрение',
-    description: 'Настройка 1С, защита IP, оптимизация процессов',
+    description: 'Быстрая интеграция 1С и защита IP с гарантией контроля качества.',
+    details: 'Настройка систем, интеграция процессов, обучение персонала. Гарантируем бесперебойную работу на каждом этапе внедрения.',
     highlight: '2-4 недели',
   },
   {
     number: 5,
     icon: HeadphonesIcon,
     title: 'Поддержка',
-    description: 'Постоянное сопровождение и консультации',
+    description: 'Постоянный мониторинг для автоматизации и роста в 2026.',
+    details: 'Круглосуточная техническая поддержка, регулярные обновления под новые законы, консультации по возникающим вопросам.',
     highlight: '24/7',
   },
   {
     number: 6,
     icon: Target,
     title: 'Результаты',
-    description: 'Измеримая экономия и рост эффективности',
+    description: 'Видимый рост капитала — прозрачные метрики успеха.',
+    details: 'Измеримые показатели: экономия на налогах, рост производительности, защищенность активов. Регулярные отчеты о достигнутых результатах.',
     highlight: 'Гарантия',
   },
+];
+
+const transformations = [
+  { from: 'От хаоса', to: 'к контролю' },
+  { from: 'От издержек', to: 'к автоматизации' },
+  { from: 'От рисков', to: 'к росту' },
 ];
 
 const Process = () => {
@@ -63,10 +75,10 @@ const Process = () => {
         {/* Section Header */}
         <div className="text-center mb-12 md:mb-16">
           <h2 className="heading-section text-primary-foreground">
-            Этапы работы: <span className="text-accent">Прозрачно</span> от начала до результата
+            Этапы работы: <span className="text-accent">Прозрачность, контроль, автоматизация и рост</span>
           </h2>
           <p className="text-primary-foreground/80 text-lg max-w-2xl mx-auto">
-            Мы гарантируем безопасность и контроль на каждом этапе
+            Адаптировано к 2026 — мы гарантируем безопасность и контроль на каждом этапе
           </p>
         </div>
 
@@ -94,8 +106,11 @@ const Process = () => {
               <h3 className="text-lg font-serif font-bold text-primary-foreground mb-2">
                 {step.title}
               </h3>
-              <p className="text-primary-foreground/70 text-sm mb-3">
+              <p className="text-primary-foreground/90 text-sm mb-3 font-medium">
                 {step.description}
+              </p>
+              <p className="text-primary-foreground/60 text-xs mb-3">
+                {step.details}
               </p>
 
               {/* Highlight Badge */}
@@ -117,20 +132,19 @@ const Process = () => {
 
         {/* Visual transformation */}
         <div className="bg-primary-foreground/5 rounded-xl p-6 md:p-8 mb-12 border border-primary-foreground/10">
-          <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8">
-            <div className="text-center md:text-right">
-              <div className="text-primary-foreground/60 text-sm mb-1">До работы с нами</div>
-              <div className="text-primary-foreground font-medium">Хаос в учете, риски потерь</div>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="w-8 h-px bg-accent/50"></div>
-              <ArrowRight className="w-8 h-8 text-accent" />
-              <div className="w-8 h-px bg-accent/50"></div>
-            </div>
-            <div className="text-center md:text-left">
-              <div className="text-accent text-sm mb-1">После работы с нами</div>
-              <div className="text-accent font-medium">Автоматизация, рост на 25%</div>
-            </div>
+          <h3 className="text-xl font-serif font-bold text-primary-foreground text-center mb-6">
+            Ваша трансформация с <span className="text-accent">Ари Консалт</span>
+          </h3>
+          <div className="grid sm:grid-cols-3 gap-6">
+            {transformations.map((item, index) => (
+              <div key={index} className="flex flex-col items-center text-center">
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="text-primary-foreground/60">{item.from}</span>
+                  <ArrowRight className="w-5 h-5 text-accent" />
+                  <span className="text-accent font-bold">{item.to}</span>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
 

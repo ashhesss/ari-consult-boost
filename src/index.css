@@ -10,20 +10,20 @@
 
 @layer base {
   :root {
-    /* Main brand colors */
+    /* Main brand colors - DEEPENED */
     --background: 0 0% 100%;
     --foreground: 0 0% 0%;
 
-    /* Deep navy blue - primary brand color */
-    --primary: 213 100% 12%;
+    /* Deeper navy blue - #000B1A */
+    --primary: 213 100% 5%;
     --primary-foreground: 0 0% 100%;
 
-    /* Golden accent */
-    --accent: 43 74% 49%;
+    /* Deeper golden accent - #C69300 */
+    --accent: 43 100% 39%;
     --accent-foreground: 0 0% 0%;
 
-    /* Secondary - lighter blue */
-    --secondary: 213 60% 20%;
+    /* Secondary - deeper blue */
+    --secondary: 213 80% 10%;
     --secondary-foreground: 0 0% 100%;
 
     /* Muted backgrounds */
@@ -42,45 +42,45 @@
 
     --border: 213 30% 85%;
     --input: 213 30% 85%;
-    --ring: 43 74% 49%;
+    --ring: 43 100% 39%;
 
     --radius: 0.5rem;
 
     /* Sidebar colors */
-    --sidebar-background: 213 100% 12%;
+    --sidebar-background: 213 100% 5%;
     --sidebar-foreground: 0 0% 100%;
-    --sidebar-primary: 43 74% 49%;
+    --sidebar-primary: 43 100% 39%;
     --sidebar-primary-foreground: 0 0% 0%;
-    --sidebar-accent: 213 60% 20%;
+    --sidebar-accent: 213 80% 10%;
     --sidebar-accent-foreground: 0 0% 100%;
-    --sidebar-border: 213 30% 25%;
-    --sidebar-ring: 43 74% 49%;
+    --sidebar-border: 213 30% 20%;
+    --sidebar-ring: 43 100% 39%;
 
-    /* Custom tokens */
-    --gold: 43 74% 49%;
-    --gold-light: 43 74% 60%;
-    --navy: 213 100% 12%;
-    --navy-light: 213 80% 25%;
+    /* Custom tokens - DEEPENED */
+    --gold: 43 100% 39%;
+    --gold-light: 43 80% 50%;
+    --navy: 213 100% 5%;
+    --navy-light: 213 80% 15%;
   }
 
   .dark {
-    --background: 213 100% 8%;
+    --background: 213 100% 4%;
     --foreground: 0 0% 100%;
-    --primary: 43 74% 49%;
+    --primary: 43 100% 39%;
     --primary-foreground: 0 0% 0%;
-    --secondary: 213 60% 20%;
+    --secondary: 213 80% 10%;
     --secondary-foreground: 0 0% 100%;
-    --muted: 213 30% 15%;
+    --muted: 213 30% 12%;
     --muted-foreground: 210 20% 70%;
-    --accent: 43 74% 49%;
+    --accent: 43 100% 39%;
     --accent-foreground: 0 0% 0%;
-    --card: 213 80% 10%;
+    --card: 213 80% 8%;
     --card-foreground: 0 0% 100%;
-    --popover: 213 80% 10%;
+    --popover: 213 80% 8%;
     --popover-foreground: 0 0% 100%;
-    --border: 213 30% 25%;
-    --input: 213 30% 25%;
-    --ring: 43 74% 49%;
+    --border: 213 30% 20%;
+    --input: 213 30% 20%;
+    --ring: 43 100% 39%;
   }
 }
 
@@ -189,10 +189,10 @@
 
   @keyframes pulseGold {
     0%, 100% {
-      box-shadow: 0 0 0 0 hsl(43 74% 49% / 0.4);
+      box-shadow: 0 0 0 0 hsl(43 100% 39% / 0.4);
     }
     50% {
-      box-shadow: 0 0 0 10px hsl(43 74% 49% / 0);
+      box-shadow: 0 0 0 10px hsl(43 100% 39% / 0);
     }
   }
 

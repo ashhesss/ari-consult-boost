@@ -31,7 +31,7 @@ const Hero = () => {
         <div 
           className="absolute inset-0"
           style={{
-            backgroundImage: `radial-gradient(circle at 2px 2px, hsl(43, 74%, 49%) 1px, transparent 0)`,
+            backgroundImage: `radial-gradient(circle at 2px 2px, hsl(43, 100%, 39%) 1px, transparent 0)`,
             backgroundSize: '40px 40px'
           }}
         />
@@ -47,9 +47,28 @@ const Hero = () => {
             </h1>
             
             <p className="text-lg md:text-xl text-primary-foreground/90 max-w-xl mx-auto lg:mx-0">
-              Бухгалтерия, 1С и защита интеллектуальной собственности для малого и среднего бизнеса. 
-              Сократите расходы на <span className="text-accent font-semibold">20%</span> за 30 дней.
+              <span className="text-accent font-semibold">В 2026 году законы ужесточаются, издержки растут на 15%:</span>{' '}
+              защитите и приумножьте свой капитал с нами
             </p>
+
+            <p className="text-base md:text-lg text-primary-foreground/80 max-w-xl mx-auto lg:mx-0">
+              Бухгалтерия, 1С и защита интеллектуальной собственности для малого и среднего бизнеса. 
+              Сократите расходы на <span className="text-accent font-semibold">20%</span> за 30 дней, избегите штрафов от новых налогов и сохраните бизнес в росте.
+            </p>
+
+            {/* УТП Block */}
+            <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-xl p-6 border border-accent/30 fade-in-up animation-delay-200">
+              <p className="text-primary-foreground/90 text-base md:text-lg leading-relaxed">
+                Представьте: в 2026 году ваши конкуренты тонут в бюрократии и растущих налогах, а вы — 
+                <span className="font-bold text-accent"> сэкономили 15-25 тыс. руб.</span> на издержках, 
+                <span className="font-bold text-accent"> автоматизировали процессы</span> и 
+                <span className="font-bold text-accent"> защитили IP</span>. Получите первую бесплатную консультацию — 
+                и превратите угрозы в возможности для 
+                <span className="font-bold text-accent"> приумножения капитала</span>. 
+                Не ждите кризиса: действуйте сейчас, чтобы ваш бизнес не просто выжил, а 
+                <span className="font-bold text-accent"> расцвел!</span>
+              </p>
+            </div>
 
             {/* Service Icons */}
             <div className="flex flex-wrap justify-center lg:justify-start gap-4 pt-4">
@@ -135,12 +154,12 @@ const Hero = () => {
                   </label>
 
                   <Button variant="cta" type="submit" className="w-full h-12 text-base pulse-gold">
-                    Получить аудит бесплатно
+                    Получите первую бесплатную консультацию
                   </Button>
 
                   <div className="flex items-center gap-2 justify-center text-sm text-accent">
                     <CheckCircle className="w-4 h-4" />
-                    <span>Бонус: Бесплатный чек-лист по оптимизации</span>
+                    <span>Избегите трудностей, сохраните бизнес и приумножьте капитал</span>
                   </div>
                 </form>
               ) : (

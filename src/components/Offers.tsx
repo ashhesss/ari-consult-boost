@@ -81,10 +81,10 @@ const OfferPopup = ({ isOpen, onClose }: OfferPopupProps) => {
             <Gift className="w-8 h-8 text-accent" />
           </div>
           <h3 className="text-2xl font-serif font-bold text-foreground mb-2">
-            Эксклюзивное предложение!
+            Первый месяц бесплатно!
           </h3>
           <p className="text-muted-foreground">
-            Скидка <span className="text-accent font-bold">15%</span> или <span className="text-accent font-bold">5 000 руб.</span> на первую услугу
+            В 2026 издержки вырастут — начните бесплатно и <span className="text-accent font-bold">приумножьте капитал!</span>
           </p>
         </div>
 
@@ -114,7 +114,7 @@ const OfferPopup = ({ isOpen, onClose }: OfferPopupProps) => {
         {/* Price */}
         <div className="text-center mb-6">
           <div className="text-muted-foreground line-through text-lg">20 000 руб.</div>
-          <div className="text-3xl font-bold text-accent">От 15 000 руб.</div>
+          <div className="text-3xl font-bold text-accent">0 руб. первый месяц</div>
           <div className="text-sm text-muted-foreground mt-1">Срок действия: до 31.01.2026</div>
         </div>
 
@@ -142,7 +142,7 @@ const OfferPopup = ({ isOpen, onClose }: OfferPopupProps) => {
               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
             />
             <Button variant="cta" type="submit" className="w-full">
-              Получить скидку
+              Получить первую консультацию и сэкономить до 15 тыс. руб.
             </Button>
           </form>
         ) : (
@@ -155,7 +155,7 @@ const OfferPopup = ({ isOpen, onClose }: OfferPopupProps) => {
         {/* FOMO */}
         <div className="flex items-center justify-center gap-2 mt-4 text-destructive text-sm">
           <AlertTriangle className="w-4 h-4" />
-          <span>Только 10 мест по акции!</span>
+          <span>Только 10 мест — не упустите в преддверии 2026!</span>
         </div>
       </div>
     </div>
@@ -232,27 +232,27 @@ const Offers = () => {
                 </div>
                 
                 <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary-foreground mb-4">
-                  Скидка <span className="text-accent">15%</span> на первую услугу
+                  <span className="text-accent">Первый месяц бесплатно</span> на первую услугу
                 </h2>
                 
                 <p className="text-primary-foreground/80 text-lg mb-6">
-                  Закажите консультацию сегодня и получите эксклюзивную скидку. 
-                  <span className="text-accent font-medium"> Экономия до 5 000 рублей!</span>
+                  В 2026 издержки вырастут — начните бесплатно и приумножьте капитал! 
+                  <span className="text-accent font-medium"> Сэкономьте до 20 000 рублей!</span>
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                   <div>
                     <div className="text-primary-foreground/60 line-through text-lg">20 000 руб.</div>
-                    <div className="text-3xl font-bold text-accent">От 15 000 руб.</div>
+                    <div className="text-3xl font-bold text-accent">0 руб. первый месяц</div>
                   </div>
                   <Button variant="cta" size="lg" onClick={() => setIsPopupOpen(true)}>
-                    Получить скидку
+                    Получить бесплатный месяц
                   </Button>
                 </div>
 
                 <div className="flex items-center gap-2 mt-4 justify-center lg:justify-start text-destructive/90">
                   <AlertTriangle className="w-4 h-4" />
-                  <span className="text-sm font-medium">Не упустите: только 10 мест по акции!</span>
+                  <span className="text-sm font-medium">Только 10 мест — не упустите в преддверии 2026!</span>
                 </div>
               </div>
 

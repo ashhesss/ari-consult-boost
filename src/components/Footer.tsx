@@ -15,14 +15,14 @@ const Footer = () => {
       {/* Map */}
       <div className="h-64 md:h-80 w-full">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2944.823982459!2d43.607!3d43.485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDPCsDI5JzA2LjAiTiA0M8KwMzYnMjUuMiJF!5e0!3m2!1sru!2sru!4v1600000000000!5m2!1sru!2sru"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2944.823982459!2d43.607087!3d43.485259!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40f045e6c2a6e52f%3A0x8c8c3c7c8c8c3c7c!2z0J_RgNC-0YHQv9C10LrRgiDQmtGD0LvQuNC10LLQsCwg0J3QsNC70YzRh9C40Lo!5e0!3m2!1sru!2sru!4v1600000000000!5m2!1sru!2sru"
           width="100%"
           height="100%"
           style={{ border: 0 }}
           allowFullScreen
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-          title="Карта офиса Ари Консалт"
+          title="Карта офиса Ари Консалт - проспект Кулиева, 10, Нальчик"
         />
       </div>
 
@@ -42,13 +42,13 @@ const Footer = () => {
               >
                 <path 
                   d="M20 2L4 38H16L20 28L24 38H36L20 2Z" 
-                  fill="hsl(213, 100%, 12%)" 
-                  stroke="hsl(43, 74%, 49%)" 
+                  fill="hsl(213, 100%, 5%)" 
+                  stroke="hsl(43, 100%, 39%)" 
                   strokeWidth="2"
                 />
                 <path 
                   d="M20 8L10 32H15L20 20L25 32H30L20 8Z" 
-                  fill="hsl(43, 74%, 49%)"
+                  fill="hsl(43, 100%, 39%)"
                 />
               </svg>
               <span className="text-xl font-serif font-bold text-accent">
@@ -56,7 +56,7 @@ const Footer = () => {
               </span>
             </a>
             <p className="text-primary-foreground/70 text-sm max-w-sm mb-6">
-              Комплексные бизнес-решения для вашего успеха. Бухгалтерия, 1С, защита интеллектуальной собственности и бережливое производство.
+              Комплексные бизнес-решения для вашего успеха. Бухгалтерия, 1С, защита интеллектуальной собственности и бережливое производство. Адаптируем ваш бизнес к 2026 году.
             </p>
             
             <div className="space-y-2">
@@ -76,7 +76,7 @@ const Footer = () => {
               </a>
               <div className="flex items-start gap-2 text-primary-foreground/80 text-sm">
                 <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                <span>КБР, г. Нальчик, пр. Кулиева, 10</span>
+                <span>Кабардино-Балкарская Республика, г. Нальчик, проспект Кулиева, 10</span>
               </div>
             </div>
           </div>

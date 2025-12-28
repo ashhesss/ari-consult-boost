@@ -7,58 +7,62 @@ const services = [
   {
     icon: Calculator,
     title: 'Бухгалтерия под ключ',
-    description: 'Мы ведем учет, чтобы вы фокусировались на развитии бизнеса.',
+    subtitle: 'Адаптирована к 2026 году — минимизируйте риски от новых налогов и издержек',
+    description: 'До: хаос в учете и штрафы от ФНС. После: автоматизация, экономия 20% и рост бизнеса на 25% в условиях инфляции.',
     benefits: [
-      'Снижение налогов 15-25%',
-      'Автоматическая отчетность',
-      'Оптимизация расходов',
+      'Полноценный отдел бухгалтерии без найма штата (экономия до 30% на зарплатах)',
+      'Зарплатно-кадровая часть с учетом обновленных трудовых законов',
+      'Обработка документов: связь с контрагентами, сбор первички, автоматизация обмена',
+      'Предварительные отчеты и ежемесячные консультации для прогнозирования рисков',
+      'Снижение налогов 15-25% за счет оптимизации под новые правила 2026',
     ],
-    transformation: {
-      before: 'До: Ручной труд, ошибки',
-      after: 'После: Автоматизация, экономия 20%'
-    }
+    price: 'От 7 тыс. руб./мес',
+    cta: 'Подробнее о защите от 2026 изменений',
   },
   {
     icon: Settings,
     title: 'Внедрение и поддержка 1С',
-    description: 'Быстрая настройка и интеграция системы за 2-4 недели.',
+    subtitle: 'Интегрируйте систему за 2-4 недели, чтобы сэкономить время в 2026 году',
+    description: 'До: разрозненные данные и ручной труд. После: единая система управления с экономией 30% времени.',
     benefits: [
-      'Экономия времени 30%',
-      'Интеграция с другими системами',
-      'Техническая поддержка 24/7',
+      'Экономия времени 30% с учетом новых отчетных требований',
+      'Интеграция с IP-защитой для безопасности данных',
+      'Настройка под специфику вашего бизнеса',
+      'Техническая поддержка и обновления 24/7',
+      'Обучение персонала работе с системой',
     ],
-    transformation: {
-      before: 'До: Разрозненные данные',
-      after: 'После: Единая система управления'
-    }
+    price: 'От 4 400 руб./мес',
+    cta: 'Узнать о быстром внедрении',
   },
   {
     icon: Shield,
     title: 'Юридическое сопровождение',
-    description: 'Защита интеллектуальной собственности с 95% успехом.',
+    subtitle: 'Защитите активы в эпоху ужесточения IP-прав в 2026',
+    description: 'До: уязвимость к судебным искам. После: полная защита и приумножение капитала через безопасные сделки.',
     benefits: [
-      'Регистрация товарных знаков',
-      'Защита патентов',
-      'Сопровождение споров',
+      'Открытие/закрытие компаний с минимизацией бюрократии',
+      'Договорная работа: составление и анализ контрактов для снижения рисков',
+      'Защита патентов и товарных знаков с 95% успехом',
+      'Проверка контрагентов на надежность, чтобы избежать убытков от мошенничества',
+      'Консультации по новым законам для предотвращения штрафов до 100 тыс. руб.',
     ],
-    transformation: {
-      before: 'До: Риск потери бренда',
-      after: 'После: Полная защита активов'
-    }
+    price: 'От 10 тыс. руб./мес',
+    cta: 'Защитить бизнес сейчас',
   },
   {
     icon: TrendingUp,
     title: 'Бережливое производство',
-    description: 'Оптимизация процессов со снижением затрат на 20%.',
+    subtitle: 'Оптимизируйте процессы, чтобы противостоять росту издержек в 2026',
+    description: 'До: неэффективные процессы и потери. После: рост на 25% и устойчивость к экономическим вызовам 2026.',
     benefits: [
-      'Автоматизация процессов',
-      'Устранение потерь',
-      'Рост производительности',
+      'Выявление ценности конечного продукта для фокуса на прибыли',
+      'Построение бизнес-процессов компании с автоматизацией',
+      'Создание оргструктуры, регламентов и чек-листов для эффективности',
+      'Устранение потерь и рост производительности на 20-30%',
+      'Адаптация к инфляции: снижение затрат на 20% в условиях удорожания ресурсов',
     ],
-    transformation: {
-      before: 'До: Избыточные затраты',
-      after: 'После: Экономия 20%+ ежемесячно'
-    }
+    price: 'От 15 тыс. руб./мес',
+    cta: 'Оптимизировать процессы',
   },
 ];
 
@@ -80,8 +84,9 @@ const Services = () => {
           <h2 className="heading-section">
             Услуги для <span className="text-accent">роста вашего бизнеса</span>
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Комплексные решения для оптимизации финансов, автоматизации и защиты активов
+          <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
+            С 350+ проектами мы знаем, как адаптировать бизнес к 2026. 
+            В 2026: налоги растут — мы снижаем их для вас.
           </p>
         </div>
 
@@ -102,29 +107,30 @@ const Services = () => {
                   <h3 className="text-xl font-serif font-bold text-foreground mb-1">
                     {service.title}
                   </h3>
-                  <p className="text-muted-foreground text-sm">
-                    {service.description}
+                  <p className="text-accent text-sm font-medium">
+                    {service.subtitle}
                   </p>
                 </div>
               </div>
 
+              {/* Description */}
+              <p className="text-muted-foreground text-sm mb-4 italic">
+                {service.description}
+              </p>
+
               {/* Benefits List */}
               <ul className="space-y-2 mb-4">
                 {service.benefits.map((benefit) => (
-                  <li key={benefit} className="flex items-center gap-2 text-foreground">
-                    <ArrowRight className="w-4 h-4 text-accent flex-shrink-0" />
+                  <li key={benefit} className="flex items-start gap-2 text-foreground">
+                    <ArrowRight className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
                     <span className="text-sm">{benefit}</span>
                   </li>
                 ))}
               </ul>
 
-              {/* Transformation */}
-              <div className="bg-muted rounded-lg p-4 mb-4">
-                <div className="flex items-center gap-4 text-sm">
-                  <span className="text-muted-foreground">{service.transformation.before}</span>
-                  <ArrowRight className="w-4 h-4 text-accent flex-shrink-0" />
-                  <span className="text-accent font-medium">{service.transformation.after}</span>
-                </div>
+              {/* Price */}
+              <div className="bg-primary/5 rounded-lg p-4 mb-4 border border-accent/20">
+                <span className="text-accent font-bold text-lg">{service.price}</span>
               </div>
 
               {/* CTA */}
@@ -133,7 +139,7 @@ const Services = () => {
                 className="w-full group-hover:bg-accent group-hover:text-accent-foreground group-hover:border-accent transition-all duration-300"
                 onClick={scrollToContacts}
               >
-                Подробнее
+                {service.cta}
               </Button>
             </div>
           ))}

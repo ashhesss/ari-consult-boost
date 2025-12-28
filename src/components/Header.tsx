@@ -52,13 +52,13 @@ const Header = () => {
             >
               <path 
                 d="M20 2L4 38H16L20 28L24 38H36L20 2Z" 
-                fill="hsl(213, 100%, 12%)" 
-                stroke="hsl(43, 74%, 49%)" 
+                fill="hsl(213, 100%, 5%)" 
+                stroke="hsl(43, 100%, 39%)" 
                 strokeWidth="2"
               />
               <path 
                 d="M20 8L10 32H15L20 20L25 32H30L20 8Z" 
-                fill="hsl(43, 74%, 49%)"
+                fill="hsl(43, 100%, 39%)"
               />
             </svg>
             <span className="text-lg md:text-xl font-serif font-bold text-accent">

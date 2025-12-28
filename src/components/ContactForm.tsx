@@ -41,12 +41,16 @@ const ContactForm = () => {
           {/* Form */}
           <div className={`${inView ? 'fade-in-up' : 'opacity-0'}`}>
             <h2 className="heading-section text-foreground">
-              Свяжитесь с нами: <span className="text-accent">Бесплатный бонус</span> за заявку
+              Свяжитесь с нами: <span className="text-accent">Бонус — первая консультация</span>
             </h2>
+            
+            <p className="text-muted-foreground mb-4">
+              Оставляйте заявку, записывайтесь на первую бесплатную консультацию — сэкономьте до 15 тыс. руб. и избегите трудностей в 2026
+            </p>
             
             <div className="flex items-center gap-2 mb-6 text-accent">
               <Gift className="w-5 h-5" />
-              <span className="font-medium">Бонус: Бесплатный чек-лист по оптимизации бизнеса</span>
+              <span className="font-medium">Бонус: Бесплатный чек-лист + первая консультация для сохранения бизнеса</span>
             </div>
 
             {!isSubmitted ? (

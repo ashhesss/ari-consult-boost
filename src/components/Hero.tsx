@@ -60,7 +60,7 @@ const Hero = () => {
             <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-xl p-6 border border-accent/30 fade-in-up animation-delay-200">
               <p className="text-primary-foreground/90 text-base md:text-lg leading-relaxed">
                 Представьте: в 2026 году ваши конкуренты тонут в бюрократии и растущих налогах, а вы — 
-                <span className="font-bold text-accent"> сэкономили 15-25 тыс. руб.</span> на издержках, 
+                <span className="font-bold text-accent"> сэкономили на издержках</span>, 
                 <span className="font-bold text-accent"> автоматизировали процессы</span> и 
                 <span className="font-bold text-accent"> защитили IP</span>. Получите первую бесплатную консультацию — 
                 и превратите угрозы в возможности для 

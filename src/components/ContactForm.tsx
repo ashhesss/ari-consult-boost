@@ -41,7 +41,7 @@ const ContactForm = () => {
           {/* Form */}
           <div className={`${inView ? 'fade-in-up' : 'opacity-0'}`}>
             <h2 className="heading-section text-foreground">
-              Свяжитесь с нами: <span className="text-accent">Бонус — первая консультация</span>
+              <span className="text-accent">Бесплатная консультация по всем блокам</span>
             </h2>
             
             <p className="text-muted-foreground mb-4">

@@ -1,4 +1,4 @@
-import { Calculator, Settings, Shield, TrendingUp, ArrowRight } from 'lucide-react';
+import { Calculator, Settings, Shield, TrendingUp, ArrowRight, Users } from 'lucide-react';
 import { useInView } from 'react-intersection-observer';
 import { Button } from '@/components/ui/button';
 import CountUp from 'react-countup';
@@ -63,6 +63,21 @@ const services = [
     ],
     price: 'От 15 тыс. руб./мес',
     cta: 'Оптимизировать процессы',
+  },
+  {
+    icon: Users,
+    title: 'Внедрение CRM Битрикс24',
+    subtitle: 'Автоматизируйте продажи и управляйте клиентами в единой системе',
+    description: 'До: потерянные заявки и хаос в продажах. После: все клиенты в одной системе, рост конверсии на 30%.',
+    benefits: [
+      'Настройка воронок продаж под специфику вашего бизнеса',
+      'Автоматизация обработки заявок и напоминаний',
+      'Интеграция с телефонией, почтой и мессенджерами',
+      'Аналитика продаж и контроль эффективности менеджеров',
+      'Обучение сотрудников работе в системе',
+    ],
+    price: 'От 5 тыс. руб./мес',
+    cta: 'Автоматизировать продажи',
   },
 ];
 
